@@ -1,0 +1,26 @@
+{
+    "name": "thedevick/tabnews-api",
+    "description": "Cliente PHP para a API do TabNews",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.2",
+        "vimeo/psalm": "^5.13",
+        "friendsofphp/php-cs-fixer": "^3.22"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TheDevick\\TabNewsApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "TheDevick",
+            "email": "erick@bilhalba.com.br",
+            "homepage": "https://TheDevick.vercel.app"
+        }
+    ]
+}
