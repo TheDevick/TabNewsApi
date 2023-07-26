@@ -5,9 +5,9 @@
 [![PsalmBadge](https://img.shields.io/badge/📌%20Psalm-Static%20Analysis-red?style=for-the-badge)](https://psalm.dev/)
 [![SemanticReleaseBadge](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release&style=for-the-badge)](https://github.com/semantic-release/semantic-release)
 
-## Getting Started
+## Utilizando a Biblioteca
 
-First, instal the package with composer:
+Primeiramente, instale-a usando composer:
 
 ```bash
 composer require thedevick/tabnews-api
