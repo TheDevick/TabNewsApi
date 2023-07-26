@@ -1,0 +1,159 @@
+{
+	"Test Generator": {
+		"prefix": "test",
+		"body": [
+			"<?php",
+			"",
+			"namespace ${RELATIVE_FILEPATH/^(?:.*[\\\\\\/])?(tests)(?=[\\\\\\/])|[\\\\\\/][^\\\\\\/]*$|([\\\\\\/])/${1:+TheDevick\\\\TabNewsApi}${2:+\\\\}/g};",
+			"",
+			"use PHPUnit\\Framework\\TestCase;",
+			"",
+			"class $TM_FILENAME_BASE extends TestCase",
+			"{",
+			"    $0",
+			"}",
+		],
+		"description": "Creates a new Test Class"
+	},
+	"Class Generator": {
+		"prefix": "class",
+		"body": [
+			"<?php",
+			"",
+			"namespace ${RELATIVE_FILEPATH/^(?:.*[\\\\\\/])?(tests)(?=[\\\\\\/])|[\\\\\\/][^\\\\\\/]*$|([\\\\\\/])/${1:+TheDevick\\\\TabNewsApi}${2:+\\\\}/g};",
+			"",
+			"class $TM_FILENAME_BASE",
+			"{",
+			"    $0",
+			"}",
+		],
+		"description": "Creates a new Class"
+	},
+	"Trait Generator": {
+		"prefix": "trait",
+		"body": [
+			"<?php",
+			"",
+			"namespace ${RELATIVE_FILEPATH/^(?:.*[\\\\\\/])?(tests)(?=[\\\\\\/])|[\\\\\\/][^\\\\\\/]*$|([\\\\\\/])/${1:+TheDevick\\\\TabNewsApi}${2:+\\\\}/g};",
+			"",
+			"trait $TM_FILENAME_BASE",
+			"{",
+			"    $0",
+			"}",
+		],
+		"description": "Creates a new Trait"
+	},
+	"Interface Generator": {
+		"prefix": "interface",
+		"body": [
+			"<?php",
+			"",
+			"namespace ${RELATIVE_FILEPATH/^(?:.*[\\\\\\/])?(tests)(?=[\\\\\\/])|[\\\\\\/][^\\\\\\/]*$|([\\\\\\/])/${1:+TheDevick\\\\TabNewsApi}${2:+\\\\}/g};",
+			"",
+			"interface $TM_FILENAME_BASE",
+			"{",
+			"    $0",
+			"}",
+		],
+		"description": "Creates a new Interface"
+	},
+	"Test Function": {
+		"prefix": [
+			"testf",
+		],
+		"body": [
+			"public function test$1(): void",
+			"{",
+			"    $2",
+			"}",
+		],
+		"description": "Creates an Test Function",
+	},
+	"Constructor": {
+		"prefix": [
+			"cons",
+		],
+		"body": [
+			"public function __construct($1)",
+			"{",
+			"    $2",
+			"}",
+		],
+		"description": "Creates an Constructor Method",
+	},
+	"Constructor Parameter": {
+		"prefix": [
+			"consp",
+		],
+		"body": [
+			"private $1 $$2;",
+			"",
+			"public function __construct($1 $$2)",
+			"{",
+			"    \\$this->$2 = $$2;",
+			"}",
+			"",
+			"public function get${2/(.)/${1:/capitalize}/}(): $1",
+			"{",
+			"    return \\$this->$2;",
+			"}",
+			"",
+			"public function set${2/(.)/${1:/capitalize}/}($1 $$2): self",
+			"{",
+			"    \\$this->$2 = $$2;",
+			"",
+			"    return \\$this;",
+			"}",
+		],
+		"description": "Creates an Constructor Method",
+	},
+	"Getter and Setter Generator": {
+		"prefix": [
+			"getSet",
+			"getterSetter"
+		],
+		"body": [
+			"public function get${2/(.)/${1:/capitalize}/}(): $1",
+			"{",
+			"    return \\$this->$2;",
+			"}",
+			"",
+			"public function set${2/(.)/${1:/capitalize}/}($1 $$2): self",
+			"{",
+			"    \\$this->$2 = $$2;",
+			"",
+			"    return \\$this;",
+			"}",
+		]
+	},
+	"Getter Generator": {
+		"prefix": [
+			"get",
+			"getter"
+		],
+		"body": [
+			"public function get${2/(.)/${1:/capitalize}/}(): $1",
+			"{",
+			"    return \\$this->$2;",
+			"}",
+		]
+	},
+	"Class Property Generator": {
+		"prefix": [
+			"prop",
+			"property"
+		],
+		"body": [
+			"private $1 $$2;",
+		]
+	},
+	"Method Argument Generator": {
+		"prefix": [
+			"arg",
+			"argument"
+		],
+		"body": [
+			"$1 $$2",
+		]
+	}
+}
